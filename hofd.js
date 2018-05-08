@@ -31,4 +31,33 @@ function filter(arr, fn) {
     return newArr;
 }
 
-console.log(filter(myNames, name => name[0] === 'R'));
+//console.log(filter(myNames, name => name[0] === 'R'));
+
+
+function hazardWarningCreator(typeOfWarning){
+    let warningCounter = 0;
+
+    return function(location){
+        warningCounter ++;
+        let t = 'time';
+        if(warningCounter >1){t = 'times'};
+        console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!`)
+        console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} ${t} today!`)
+
+    }
+}
+/*
+const rocksWarning = hazardWarningCreator('Rocks on the Road');
+
+rocksWarning('portland');
+rocksWarning('chicago');
+rocksWarning('Los Angeles')
+
+const coffeeWarning = hazardWarningCreator('not enough coffeee');
+
+coffeeWarning('portland')
+*/
+
+
+
+
