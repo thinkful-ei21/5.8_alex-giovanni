@@ -58,6 +58,12 @@ const coffeeWarning = hazardWarningCreator('not enough coffeee');
 coffeeWarning('portland')
 */
 
-
+let turtleArr = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+turtleArr = turtleArr.filter(function(x){
+    return x[0] < 0 || x[1] < 0? false: true;
+})
+turtleArr = turtleArr.map(function(x){return x[0]+x[1]}).forEach(x=>console.log(x));
+//turtleArr.forEach(x=>console.log(x));
+//console.log(turtleArr);
 
 
