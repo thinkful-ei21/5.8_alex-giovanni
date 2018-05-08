@@ -67,3 +67,14 @@ turtleArr = turtleArr.map(function(x){return x[0]+x[1]}).forEach(x=>console.log(
 //console.log(turtleArr);
 
 
+
+let input = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest'
+
+function reducer(accumulated, passed){
+    if(passed.length === 3){return accumulated += ' '}
+    else{return accumulated += passed[passed.length-1].toUpperCase()};
+}
+
+
+console.log(input.split(' ').reduce(reducer, ''))
+
